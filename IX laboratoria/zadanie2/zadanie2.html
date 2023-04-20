@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+  </head>
+<body>
+    <input class="input" id="input" type="number"><br>
+
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+
+    <script>
+        let input = document.getElementById("input");
+        // let input = document.querySelector(".input");
+        // let array_of_spans = Array.from(document.getElementsByTagName("span"));
+        let array_of_spans = document.querySelectorAll("span");
+
+        input.value = 10;
+        array_of_spans.forEach(element => {
+                element.textContent = 10;
+            });
+
+        setInterval(function() {
+            let i = parseInt(input.value);
+            if (i > 0) {
+            input.value = --i;
+            array_of_spans.forEach(element => {
+                element.textContent = i;
+            });
+            }}, 1000);
+    </script>
+</body>
+</html>

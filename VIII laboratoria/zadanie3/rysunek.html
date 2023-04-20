@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      Page title
+    </title>
+  </head>
+  <body>
+    <main>
+      <h1>
+        Płótno
+      </h1>
+
+      <h1>
+        Canvas
+      </h1>
+
+      <canvas id="canvas"
+              width="200"
+              height="300"
+              style="border:1px solid #000000;">
+        Wygląda na to, że twoja przeglądarka nie obsługuje elementu "canvas" / It looks like your browser does not support the "canvas" element
+      </canvas>
+      <script>
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        ctx.font = '18px Arial';
+        
+        ctx.shadowColor='#6666ff';
+        ctx.shadowBlur = 10;
+        ctx.shadowOffsetX = 6;
+        ctx.shadowOffsetY = 6;
+
+        ctx.fillText("Car dealer 'Dealerek'", 17, 45); //Wykreślenie podanego tekstu na płótnie / Drawing given text on canvas
+
+        ctx.beginPath();
+            ctx.shadowBlur = 0;
+            ctx.shadowOffsetX = 0;
+            ctx.shadowOffsetY = 0;
+
+            ctx.arc(150, 250, 35, 0, 2 * Math.PI);
+            ctx.fill();
+
+            ctx.arc(50, 250, 35, 0, 2 * Math.PI);
+            ctx.fill();
+
+            ctx.fillStyle = "#00008b";
+
+            ctx.fillRect(10, 150, 180, 80);
+
+            ctx.fillRect(40, 70, 120, 80);
+
+            ctx.fillStyle = "#add8e6";
+
+            ctx.fillRect(60, 90, 80, 60);
+    </script>
+    </main>
+  </body>
+</html>

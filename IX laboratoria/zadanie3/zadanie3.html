@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <script src =" https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src =" https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src =" https://unpkg.com/@babel/standalone/babel.min.js "></script>    
+  </head>
+<body>
+  <input class="input" id="input" type="number"><br>
+      <span id="root">0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <span>0</span><br>
+    <script type ="text/babel">
+      let input = document.getElementById("input");
+      input.value = 10;
+
+      let i = parseInt(input.value)
+
+      class Span extends React.Component {
+        render() {
+          return <span>{new Date().toLocaleTimeString()}</span>;
+        } 
+      }
+
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+      
+      setInterval(root.render(<Span/>), 1000);
+    </script>
+</body>
+</html>

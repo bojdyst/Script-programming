@@ -1,0 +1,18 @@
+.rotate {
+    animation: rotate 2s linear infinite;
+    animation-play-state: paused;
+}
+
+.rotate:hover {
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    to { transform: rotate(360deg) }
+}
+
+@media only screen and (min-device-width: 500px) {
+    .show-mobile {
+      display: none;
+    }
+}

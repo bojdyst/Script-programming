@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://www.w3schools.com/w3css/4/w3.css"><!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+          href="script.css"
+          media="screen"
+          type="text/css">
+    <title>
+      Cars dealer "dealerek"
+    </title>
+  </head>
+  <body>
+    <div class="w3-bar w3-yellow w3-padding-small">
+      <a href="#" class="w3-bar-item">
+        <i class="fa-solid fa-car"></i>
+      </a>
+      <button class="show-mobile w3-right w3-yellow" onclick="myFunction('Demo1')" class="w3-button w3-light-grey">
+        <i class="fa-sharp fa-solid fa-list"></i>
+      </button>
+        <div id="Demo1" class="w3-hide w3-yellow">
+          <div class="w3-bar w3-yellow w3-padding-small">
+            <div class="w3-dropdown-hover w3-left">
+              <button class="w3-button w3-yellow">Pojazdy
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="w3-dropdown-content w3-bar-block w3-border w3-border-grey">
+                <a href="#" class="w3-bar-item w3-button">Samochody</a>
+                <a href="#" class="w3-bar-item w3-button">Przyczepy</a>
+              </div>
+            </div>
+            <a id="hide1" href="#" class="w3-bar-item w3-button w3-yellow w3-right w3-border w3-round-large w3-border-grey">Szukaj</a>
+            <input id="hide2" type="text" class="w3-bar-item w3-input w3-right w3-border w3-round-large w3-border-grey" placeholder="Szukaj">
+          </div>
+        </div>
+      <a id="hide1" href="#" class="w3-bar-item w3-button w3-yellow w3-right w3-border w3-round-large w3-border-grey">Szukaj</a>
+      <input id="hide2" type="text" class="w3-bar-item w3-input w3-right w3-border w3-round-large w3-border-grey" placeholder="Szukaj">
+      <div id="hide" class="w3-dropdown-hover w3-right">
+        <button class="w3-button">Pojazdy
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="w3-dropdown-content w3-bar-block w3-border w3-border-grey">
+          <a href="#" class="w3-bar-item w3-button">Samochody</a>
+          <a href="#" class="w3-bar-item w3-button">Przyczepy</a>
+        </div>
+      </div>
+    </div>
+    <div class="w3-row-padding">
+      <div class="w3-col l1">
+        <p></p>
+      </div>
+      <div class="w3-col l5 m6 s12 rotate">
+        <div class="w3-display-container w3-border">
+          <img src="tipo.png" style="width: 100%">
+          <div class="w3-container">
+            <h3>Fiat Tipo</h3>
+            <li>Silnik bęzynowy 999 cm3</li>
+            <li>Skrzynia biegów manualna</li>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l4 m6 s12 rotate">
+        <div class="w3-display-container w3-border">
+          <img src="500.jpg" style="width: 100%">
+          <div class="w3-container">
+            <h3>Fiat 500</h3>
+            <li>Silnik elektryczny</li>
+            <li>Zasięg 400 km</li>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-row-padding">
+      <div class="w3-col l2">
+        <p></p>
+      </div>
+        <div class="w3-col l4 m6 s12 rotate">
+          <div class="w3-display-container w3-border">
+            <img src="przyczepa2.jpg" style="width: 100%">
+            <div class="w3-container">
+                <h4>PRZYCZEPA SAMOCHODOWA Z<br>PLANDEKĄ</h4>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col l2 m1">
+          <p></p>
+        </div>
+        <div class="w3-col l3 m6 s12 rotate">
+          <div class="w3-display-container w3-border", style="width: 101.4%">
+            <img src="przyczepa1.png" style="width: 100%">
+            <div class="w3-container">
+                <h4>PRZYCZEPA SAMOCHODOWA <br> JEDNOSIOWA UNITRAILER</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="w3-row-padding">
+      <div class="w3-col l1">
+        <p></p>
+      </div>
+        <div class="w3-col l10 m12 s12 w3-green">
+            <a href="#" class="w3-bar-item w3">
+                <i class="fa-regular fa-copyright"></i>
+            </a>
+            <a>Szablony CyberAGH</a>
+        </div>
+    </div>
+    <script>
+      function myFunction(id) {
+        let x = document.getElementById(id);
+        let y = document.getElementById("hide");
+        let z = document.getElementById("hide1");
+        let v = document.getElementById("hide2");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+          y.style.display = "none";
+          z.style.display = "none";
+          v.style.display = "none";
+        } else { 
+          x.className = x.className.replace(" w3-show", "");
+          y.style.display = "block";
+          z.style.display = "block";
+          v.style.display = "block";
+        }
+      }
+      </script>
+  </body>
+</html>
